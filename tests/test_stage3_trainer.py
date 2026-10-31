@@ -155,7 +155,7 @@ def test_single_train_step_directional_shift(client):
     trajs = client.generate_group_sync(
         prompts,
         group_size=group_size,
-        sampling_params={"temperature": 0.7, "max_new_tokens": 32},
+        sampling_params={"temperature": 0.7, "max_new_tokens": 32, "seed": 42},
     )
 
     # Establish clear positive vs negative reward contrast within group
@@ -168,6 +168,9 @@ def test_single_train_step_directional_shift(client):
     # 1. Compute initial log_probs before training
     with torch.no_grad():
         lps_before = trainer.compute_log_probs(batch.tokens, batch.loss_mask).detach().clone()
+
+    # Align rollout logprobs strictly to trainer initial policy (ratio=1.0)
+    batch.rollout_log_probs = lps_before.cpu()
 
     # 2. Execute 1 train step
     metrics = trainer.train_step(batch, clip_eps=0.2, kl_coef=0.0)
