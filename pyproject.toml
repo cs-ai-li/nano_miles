@@ -29,3 +29,6 @@ Homepage = "https://github.com/cs-ai-li/-nano_miles"
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["nano_miles*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
