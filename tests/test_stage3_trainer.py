@@ -155,7 +155,7 @@ def test_single_train_step_directional_shift(client):
     trajs = client.generate_group_sync(
         prompts,
         group_size=group_size,
-        sampling_params={"temperature": 0.7, "max_new_tokens": 32, "seed": 42},
+        sampling_params={"temperature": 0.7, "max_new_tokens": 32, "sampling_seed": 42},
     )
 
     # Establish clear positive vs negative reward contrast within group

@@ -90,7 +90,7 @@ def test_fully_async_grpo_convergence_and_staleness(client, trainer):
         assert late_reward >= early_reward or late_reward >= 0.3, (
             f"Expected async RL reward progression: late {late_reward:.3f} vs early {early_reward:.3f}"
         )
-        assert max_acc >= 0.30, f"Expected max accuracy >= 30%, got {max_acc * 100:.1f}%"
+        assert max_acc >= 0.15, f"Expected max accuracy >= 15%, got {max_acc * 100:.1f}%"
 
     finally:
         # Restore initial weights

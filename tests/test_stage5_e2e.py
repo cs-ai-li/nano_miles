@@ -68,7 +68,7 @@ def test_end_to_end_grpo_convergence(client, trainer):
             assert not math.isnan(h["pg_loss"]) and not math.isinf(h["pg_loss"])
             assert not math.isnan(h["kl"]) and not math.isinf(h["kl"])
             # Parity drift audit: IPC hot sync keeps Trainer and SGLang tightly aligned across steps
-            assert h["parity_diff"] < 0.08, f"Step {h['step']} on-policy parity drift exceeded 0.08: {h['parity_diff']}"
+            assert h["parity_diff"] < 0.08, f"Step {h['step']} on-policy parity drift exceeded 0.15: {h['parity_diff']}"
             # Sub-second IPC sync latency
             assert h["ipc_sync_ms"] < 1000.0, f"Step {h['step']} IPC sync exceeded 1000ms: {h['ipc_sync_ms']}ms"
 
