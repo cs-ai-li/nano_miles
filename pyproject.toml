@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nano-miles"
+version = "0.1.0"
+description = "A minimal, 720-line single-GPU implementation of DeepSeek-R1 GRPO with SGLang and CUDA IPC hot weight synchronization"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "cs-ai-li" }]
+dependencies = [
+    "torch>=2.4.0",
+    "transformers>=4.45.0",
+    "sglang>=0.4.0",
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/cs-ai-li/-nano_miles"
+"Blog Post" = "https://my-blog-tau-nine-28.vercel.app/posts/building-nano-miles-from-scratch/"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nano_miles*"]
