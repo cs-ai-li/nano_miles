@@ -1,7 +1,7 @@
 # ⚡ nano-miles: 大道至简的单机极简强化学习框架
 
 <p align="center">
-  <a href="https://github.com/cs-ai-li/-nano_miles"><img src="https://img.shields.io/badge/GitHub-cs--ai--li%2F--nano__miles-181717?logo=github" alt="GitHub"></a>
+  <a href="https://github.com/cs-ai-li/nano_miles"><img src="https://img.shields.io/badge/GitHub-cs--ai--li%2Fnano__miles-181717?logo=github" alt="GitHub"></a>
   <a href="https://my-blog-tau-nine-28.vercel.app/posts/building-nano-miles-from-scratch/"><img src="https://img.shields.io/badge/Architecture%20Deep%20Dive-Vercel%20Blog-0070F3?logo=vercel" alt="Blog"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python" alt="Python"></a>

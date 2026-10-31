@@ -23,7 +23,7 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/cs-ai-li/-nano_miles"
+Homepage = "https://github.com/cs-ai-li/nano_miles"
 "Blog Post" = "https://my-blog-tau-nine-28.vercel.app/posts/building-nano-miles-from-scratch/"
 
 [tool.setuptools.packages.find]
